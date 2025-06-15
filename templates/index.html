@@ -1,0 +1,116 @@
+{% extends "base.html" %}
+
+{% block title %}Motorsiklet Dünyası - Ana Sayfa{% endblock %}
+
+{% block content %}
+<!-- Ana Arama Kutusu -->
+<div class="hero-search">
+    <div class="text-center mb-4">
+        <h1 class="hero-title">
+            <i class="fas fa-motorcycle text-primary"></i> 
+            Motosiklet Dünyası'na Hoş Geldiniz
+        </h1>
+        <p class="hero-subtitle">
+            Aradığınız markayı yazın ve hemen o sayfaya gidin!
+        </p>
+    </div>
+    <form action="{{ url_for('arama') }}" method="POST" class="hero-search-form">
+        <div class="search-input-group">
+            <div class="search-icon">
+                <i class="fas fa-search"></i>
+            </div>
+            <input type="text" class="form-control search-input" 
+                   name="arama_terimi" 
+                   placeholder="Yamaha, Honda, Suzuki, Kuba yazın..." 
+                   autocomplete="off"
+                   required>
+            <button type="submit" class="btn search-btn">
+                Ara <i class="fas fa-arrow-right ms-2"></i>
+            </button>
+        </div>
+        <div class="search-suggestions mt-3">
+            <small class="text-muted">
+                <i class="fas fa-lightbulb"></i> 
+                <strong>Öneri:</strong> 
+                <span class="suggestion-item" onclick="document.querySelector('[name=arama_terimi]').value='yamaha'">Yamaha</span>, 
+                <span class="suggestion-item" onclick="document.querySelector('[name=arama_terimi]').value='honda'">Honda</span>, 
+                <span class="suggestion-item" onclick="document.querySelector('[name=arama_terimi]').value='suzuki'">Suzuki</span>, 
+                <span class="suggestion-item" onclick="document.querySelector('[name=arama_terimi]').value='kuba'">Kuba</span>
+            </small>
+        </div>
+    </form>
+</div>
+
+<!-- Ana İçerik -->
+<div class="content-card">
+    <h3 class="mb-4">
+        <i class="fas fa-images"></i> Motosiklet Galerisi
+    </h3>
+    
+    <div class="photo-grid">
+        <div class="photo-placeholder">
+            <img src="/static/images/yamaha1.jpg" alt="Yamaha Motosiklet" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+        </div>
+        <div class="photo-placeholder">
+            <img src="/static/images/yamaha2.jpg" alt="Yamaha Motosiklet 2" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+        </div>
+        <div class="photo-placeholder">
+            <img src="/static/images/honda1.jpg" alt="Honda Motosiklet" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+        </div>
+        <div class="photo-placeholder">
+            <img src="/static/images/honda2.jpg" alt="Honda Motosiklet 2" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+        </div>
+        <div class="photo-placeholder">
+            <img src="/static/images/suzuki1.jpg" alt="Suzuki Motosiklet" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+        </div>
+        <div class="photo-placeholder">
+            <img src="/static/images/suzuki2.jpg" alt="Suzuki Motosiklet 2" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+        </div>
+        <div class="photo-placeholder">
+            <img src="/static/images/kuba1.png" alt="Kuba Motosiklet" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+        </div>
+        <div class="photo-placeholder">
+            <img src="/static/images/kuba2.jpg" alt="Kuba Motosiklet 2" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+        </div>
+    </div>
+    
+    <div class="mt-4">
+        <h4>Hoş Geldiniz!</h4>
+        <p class="text-muted">
+            Motorsiklet Dünyası'na hoş geldiniz! Sol menüden istediğiniz markayı seçerek o markaya ait 
+            motosikletleri görüntüleyebilir, arama kutusu ile aradığınız modeli bulabilirsiniz.
+        </p>
+        
+        <div class="row mt-4">
+            <div class="col-md-3">
+                <div class="text-center p-3 bg-light rounded">
+                    <i class="fas fa-motorcycle fa-2x text-primary mb-2"></i>
+                    <h5>Yamaha</h5>
+                    <p class="small text-muted">Kalite ve performans</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="text-center p-3 bg-light rounded">
+                    <i class="fas fa-motorcycle fa-2x text-danger mb-2"></i>
+                    <h5>Honda</h5>
+                    <p class="small text-muted">Güvenilir teknoloji</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="text-center p-3 bg-light rounded">
+                    <i class="fas fa-motorcycle fa-2x text-warning mb-2"></i>
+                    <h5>Suzuki</h5>
+                    <p class="small text-muted">Sportif ruh</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="text-center p-3 bg-light rounded">
+                    <i class="fas fa-motorcycle fa-2x text-success mb-2"></i>
+                    <h5>Kuba</h5>
+                    <p class="small text-muted">Ekonomik çözümler</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} 

@@ -1,0 +1,167 @@
+{% extends "base.html" %}
+
+{% block title %}Motosiklet Karşılaştırma - Motorsiklet Dünyası{% endblock %}
+
+{% block content %}
+<div class="content-card">
+    <div class="text-center mb-4">
+        <i class="fas fa-balance-scale fa-3x text-info mb-3"></i>
+        <h2 class="text-info">Motosiklet Karşılaştırma</h2>
+        <p class="text-muted">Farklı markaları karşılaştırın ve en iyisini seçin</p>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card h-100">
+                <div class="card-header bg-primary text-white text-center">
+                    <h5><i class="fas fa-motorcycle"></i> Yamaha</h5>
+                </div>
+                <div class="card-body">
+                    <ul class="list-unstyled">
+                        <li><strong>Performans:</strong> ⭐⭐⭐⭐⭐</li>
+                        <li><strong>Kalite:</strong> ⭐⭐⭐⭐⭐</li>
+                        <li><strong>Fiyat:</strong> ⭐⭐⭐</li>
+                        <li><strong>Yakıt:</strong> ⭐⭐⭐⭐</li>
+                    </ul>
+                    <hr>
+                    <h6>Avantajlar:</h6>
+                    <ul class="small">
+                        <li>Yüksek performans</li>
+                        <li>Dayanıklı yapı</li>
+                        <li>Teknolojik özellikler</li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <a href="{{ url_for('yamaha') }}" class="btn btn-primary btn-sm w-100">Detaylı Bilgi</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-3">
+            <div class="card h-100">
+                <div class="card-header bg-danger text-white text-center">
+                    <h5><i class="fas fa-motorcycle"></i> Honda</h5>
+                </div>
+                <div class="card-body">
+                    <ul class="list-unstyled">
+                        <li><strong>Performans:</strong> ⭐⭐⭐⭐</li>
+                        <li><strong>Kalite:</strong> ⭐⭐⭐⭐⭐</li>
+                        <li><strong>Fiyat:</strong> ⭐⭐⭐⭐</li>
+                        <li><strong>Yakıt:</strong> ⭐⭐⭐⭐⭐</li>
+                    </ul>
+                    <hr>
+                    <h6>Avantajlar:</h6>
+                    <ul class="small">
+                        <li>Güvenilirlik</li>
+                        <li>Ekonomik yakıt</li>
+                        <li>Kolay bakım</li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <a href="{{ url_for('honda') }}" class="btn btn-danger btn-sm w-100">Detaylı Bilgi</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-3">
+            <div class="card h-100">
+                <div class="card-header bg-warning text-white text-center">
+                    <h5><i class="fas fa-motorcycle"></i> Suzuki</h5>
+                </div>
+                <div class="card-body">
+                    <ul class="list-unstyled">
+                        <li><strong>Performans:</strong> ⭐⭐⭐⭐⭐</li>
+                        <li><strong>Kalite:</strong> ⭐⭐⭐⭐</li>
+                        <li><strong>Fiyat:</strong> ⭐⭐⭐</li>
+                        <li><strong>Yakıt:</strong> ⭐⭐⭐</li>
+                    </ul>
+                    <hr>
+                    <h6>Avantajlar:</h6>
+                    <ul class="small">
+                        <li>Sportif tasarım</li>
+                        <li>Hızlı sürüş</li>
+                        <li>Güçlü motor</li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <a href="{{ url_for('suzuki') }}" class="btn btn-warning btn-sm w-100">Detaylı Bilgi</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-3">
+            <div class="card h-100">
+                <div class="card-header bg-success text-white text-center">
+                    <h5><i class="fas fa-motorcycle"></i> Kuba</h5>
+                </div>
+                <div class="card-body">
+                    <ul class="list-unstyled">
+                        <li><strong>Performans:</strong> ⭐⭐⭐</li>
+                        <li><strong>Kalite:</strong> ⭐⭐⭐</li>
+                        <li><strong>Fiyat:</strong> ⭐⭐⭐⭐⭐</li>
+                        <li><strong>Yakıt:</strong> ⭐⭐⭐⭐</li>
+                    </ul>
+                    <hr>
+                    <h6>Avantajlar:</h6>
+                    <ul class="small">
+                        <li>Uygun fiyat</li>
+                        <li>Düşük maliyet</li>
+                        <li>Kolay kullanım</li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <a href="{{ url_for('kuba') }}" class="btn btn-success btn-sm w-100">Detaylı Bilgi</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="mt-5">
+        <h4 class="text-center mb-4">Genel Değerlendirme</h4>
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Marka</th>
+                        <th>En İyi Özellik</th>
+                        <th>Kullanım Alanı</th>
+                        <th>Hedef Kitle</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong class="text-primary">Yamaha</strong></td>
+                        <td>Yüksek performans</td>
+                        <td>Spor ve günlük kullanım</td>
+                        <td>Deneyimli sürücüler</td>
+                    </tr>
+                    <tr>
+                        <td><strong class="text-danger">Honda</strong></td>
+                        <td>Güvenilirlik</td>
+                        <td>Günlük ve uzun yol</td>
+                        <td>Her seviye sürücü</td>
+                    </tr>
+                    <tr>
+                        <td><strong class="text-warning">Suzuki</strong></td>
+                        <td>Sportif performans</td>
+                        <td>Yarış ve spor</td>
+                        <td>Spor tutkunları</td>
+                    </tr>
+                    <tr>
+                        <td><strong class="text-success">Kuba</strong></td>
+                        <td>Ekonomik fiyat</td>
+                        <td>Şehir içi ulaşım</td>
+                        <td>Başlangıç seviyesi</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <div class="text-center mt-4">
+        <a href="{{ url_for('index') }}" class="btn btn-outline-info">
+            <i class="fas fa-arrow-left"></i> Ana Sayfaya Dön
+        </a>
+    </div>
+</div>
+{% endblock %} 
